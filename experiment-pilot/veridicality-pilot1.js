@@ -1,6 +1,6 @@
 //(if collecting data with php/server instead of MTurk)
 var experimentName = "veridicality-pilot1";
-var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/experiments/cgi-bin/process.php";
+var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process.php";
 
 
 // List of stimuli
