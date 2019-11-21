@@ -23,15 +23,15 @@ var stimuliList = shuffle([
 
 ["al", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
     ["go", "go"]
     ],
 
-["al", ["marry", "painter", "come"], 
-    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["al", ["marry", "painter", "come"], 
+//     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+//     [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["al", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
@@ -41,32 +41,32 @@ var stimuliList = shuffle([
 
 ["al", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["go", "go"]
+    ],
+
+// ["al", ["painter", "come", "marry"], 
+//     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+//     [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
+//     ["geo1", "geo2"]
+//     ],
+
+["al", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["al", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["go", "go"]
+    ],
+
+
+["gieok", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
     [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
-    ["go", "go"]
-    ],
-
-["al", ["painter", "come", "marry"], 
-    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
-    ["geo1", "geo2"]
-    ],
-
-["al", ["painter", "come", "marry"], 
-    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
-    ["jul1", "jul2"]
-    ],
-
-["al", ["painter", "come", "marry"], 
-    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
-    ["go", "go"]
-    ],
-
-
-["gieok", ["come", "marry", "painter"], 
-    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
     ["jul1", "jul2"]
     ],
 
@@ -76,15 +76,15 @@ var stimuliList = shuffle([
     ["go", "go"]
     ],
 
-["gieok", ["come", "marry", "painter"], 
-    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
-    ["geo1", "geo2"] 
-    ],
+// ["gieok", ["come", "marry", "painter"], 
+//     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+//     [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+//     ["geo1", "geo2"] 
+//     ],
 
 ["gieok", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
     ["jul1", "jul2"] 
     ],
 
@@ -94,15 +94,15 @@ var stimuliList = shuffle([
     ["go", "go"]
     ],
 
-["gieok", ["marry", "painter", "come"], 
-    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
-    ["geo1", "geo2"] 
-    ],
+// ["gieok", ["marry", "painter", "come"], 
+//     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+//     [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+//     ["geo1", "geo2"] 
+//     ],
 
 ["gieok", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
     ["jul1", "jul2"] 
     ],
 
@@ -112,22 +112,22 @@ var stimuliList = shuffle([
     ["go", "go"] 
     ],
 
-["gieok", ["painter", "come", "marry"], 
-    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
-    ["geo1", "geo2"] 
-    ],
+// ["gieok", ["painter", "come", "marry"], 
+//     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+//     [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+//     ["geo1", "geo2"] 
+//     ],
 
 
 ["mit", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
     ["go", "go"]
     ],
 
 ["mit", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
     ["geo1", "geo2"]
     ],
 
@@ -139,33 +139,33 @@ var stimuliList = shuffle([
 
 ["mit", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
     ["go", "go"]
     ],
+
+// ["mit", ["marry", "painter", "come"], 
+//     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+//     [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["mit", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
     [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
-    ["geo1", "geo2"]
-    ],
-
-["mit", ["marry", "painter", "come"], 
-    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
     ["jul1", "jul2"]
     ],
 
 ["mit", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
     ["go", "go"]
     ],
 
-["mit", ["painter", "come", "marry"], 
-    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["mit", ["painter", "come", "marry"], 
+//     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+//     [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["mit", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
@@ -174,15 +174,15 @@ var stimuliList = shuffle([
     ],
 
 
-["moreu", ["come", "marry", "painter"], 
-    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["moreu", ["come", "marry", "painter"], 
+//     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+//     [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["moreu", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
     ["jul1", "jul2"]
     ],
 
@@ -192,15 +192,15 @@ var stimuliList = shuffle([
     ["go", "go"]
     ],
 
-["moreu", ["marry", "painter", "come"], 
-    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["moreu", ["marry", "painter", "come"], 
+//     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+//     [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["moreu", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
     ["jul1", "jul2"]
     ],
 
@@ -209,16 +209,16 @@ var stimuliList = shuffle([
     [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
     ["go", "go"]
     ],
+
+// ["moreu", ["painter", "come", "marry"], 
+//     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+//     [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["moreu", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
-    ["geo1", "geo2"]
-    ],
-
-["moreu", ["painter", "come", "marry"], 
-    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
     ["jul1", "jul2"]
     ],
 
@@ -231,7 +231,7 @@ var stimuliList = shuffle([
 
 ["ggameok", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
     ["jul1", "jul2"]
     ],
 
@@ -241,15 +241,15 @@ var stimuliList = shuffle([
     ["go", "go"]
     ],
 
-["ggameok", ["come", "marry", "painter"], 
-    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["ggameok", ["come", "marry", "painter"], 
+//     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+//     [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["ggameok", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
     ["jul1", "jul2"]
     ],
 
@@ -259,15 +259,15 @@ var stimuliList = shuffle([
     ["go", "go"]
     ],
 
-["ggameok", ["marry", "painter", "come"], 
-    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["ggameok", ["marry", "painter", "come"], 
+//     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+//     [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["ggameok", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
     ["jul1", "jul2"]
     ],
 
@@ -277,24 +277,24 @@ var stimuliList = shuffle([
     ["go", "go"]
     ],
 
-["ggameok", ["painter", "come", "marry"], 
-    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["ggameok", ["painter", "come", "marry"], 
+//     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+//     [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 
 ["alanae", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
     ["go", "go"]
     ],
 
-["alanae", ["come", "marry", "painter"], 
-    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
-    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["alanae", ["come", "marry", "painter"], 
+//     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+//     [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["alanae", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
@@ -304,15 +304,15 @@ var stimuliList = shuffle([
 
 ["alanae", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
     ["go", "go"]
     ],
 
-["alanae", ["marry", "painter", "come"], 
-    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
-    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["alanae", ["marry", "painter", "come"], 
+//     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+//     [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["alanae", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
@@ -322,20 +322,68 @@ var stimuliList = shuffle([
 
 ["alanae", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
     ["go", "go"]
     ],
 
-["alanae", ["painter", "come", "marry"], 
-    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
-    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
-    ["geo1", "geo2"]
-    ],
+// ["alanae", ["painter", "come", "marry"], 
+//     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+//     [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+//     ["geo1", "geo2"]
+//     ],
 
 ["alanae", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
     [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
     ["jul1", "jul2"]
+    ],
+
+["nat", ["bop", "bop", "bop"], 
+    ["요한이가 어제 식당에 갔다고 생각한다", "요한이가 어제 식당에 갔다고 생각한다", "요한이가 어제 식당에 갔다고 생각한다"],
+    [ ["c1", "c1"], ["c1", "c1"], ["c1", "c1"] ], 
+    ["ctr", "ctr"]
+    ],
+
+["nat", ["unnie", "unnie", "unnie"], 
+    ["민아가 희선의 친동생이라고 생각한다", "민아가 희선의 친동생이라고 생각한다", "민아가 희선의 친동생이라고 생각한다"],
+    [ ["c2", "c2"], ["c2", "c2"], ["c2", "c2"] ], 
+    ["ctr", "ctr"]
+    ],
+
+["nat", ["puppy", "puppy", "puppy"], 
+    ["민호가 지난주에 고양이를 입양했다고 생각한다", "민호가 지난주에 고양이를 입양했다고 생각한다", "민호가 지난주에 고양이를 입양했다고 생각한다"],
+    [ ["c5", "c5"], ["c5", "c5"], ["c5", "c5"] ], 
+    ["ctr", "ctr"]
+    ],
+
+["nat", ["presch", "presch", "presch"], 
+    ["동희가 초등학생이라고 생각한다", "동희가 초등학생이라고 생각한다", "동희가 초등학생이라고 생각한다"],
+    [ ["c6", "c6"], ["c6", "c6"], ["c6", "c6"] ], 
+    ["ctr", "ctr"]
+    ],
+
+["unn", ["like", "like", "like"], 
+    ["서희가 누구인지 안다", "서희가 누구인지 안다", "서희가 누구인지 안다"],
+    [ ["c7", "c7"], ["c7", "c7"], ["c7", "c7"] ], 
+    ["ctr", "ctr"]
+    ],
+
+["unn", ["ramen", "ramen", "ramen"], 
+    ["별이가 라면을 끓였다고 생각한다", "별이가 라면을 끓였다고 생각한다", "별이가 라면을 끓였다고 생각한다"],
+    [ ["c8", "c8"], ["c8", "c8"], ["c8", "c8"] ], 
+    ["ctr", "ctr"]
+    ],
+
+["unn", ["run", "run", "run"], 
+    ["주희가 달리지 않았다고 생각한다", "주희가 달리지 않았다고 생각한다", "주희가 달리지 않았다고 생각한다"],
+    [ ["c9", "c9"], ["c9", "c9"], ["c9", "c9"] ], 
+    ["ctr", "ctr"]
+    ],
+
+["unn", ["bike", "bike", "bike"], 
+    ["태리가 자전거가 없다고 생각한다", "태리가 자전거가 없다고 생각한다", "태리가 자전거가 없다고 생각한다"],
+    [ ["c10", "c10"], ["c10", "c10"], ["c10", "c10"] ], 
+    ["ctr", "ctr"]
     ]
 
 
@@ -347,8 +395,8 @@ var stimuliList = shuffle([
 
 var nameList = shuffle([
     "별이", "지희", "윤아", "숙희", "선아", "화사", "미애", "유리", "수아", "설아", 
-    "미나", "지혜", "나래", "은아", "수라", "진아", "영희", "연지", "세아", "민혜",
-    "애리", "민아", "보라", "솔라", "민지", "영자", "연화", "영혜", "마리", "가희",
+    "나리", "지혜", "나래", "은아", "수라", "진아", "영희", "연지", "세아", "민혜",
+    "애리", "미라", "보라", "솔라", "민지", "영자", "연화", "영혜", "마리", "가희",
     "경아", "정화", "지나", "다예", "다희", "설희", "민희", "영지", "예리", "다라",
     "도희", "예지", "혜주", "선우", "담비", "지수", "성희", "미라", "슬기", "신애",
     "유리", "은지", "현서", "제아", "혜미", "영미", "정희", "연희", "수지", "희라",
@@ -390,13 +438,13 @@ function showSlide (slideName) {
 
 var itemRandom = Math.floor(Math.random() * 3);
 var prosRandom = Math.floor(Math.random() * 3);
-var compRandom = Math.floor(Math.random() * 3);
-var binaryRandom = Math.floor(Math.random() * 2);
+var binaryRandom1 = Math.floor(Math.random() * 2);
+var binaryRandom2 = Math.floor(Math.random() * 2);
 
 
 
 function stepExperiment () {
-    if (trialnum == 4) { // end the experiment. 
+    if (trialnum == 46) { // end the experiment. 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
@@ -443,84 +491,39 @@ function stepExperiment () {
 
         trialnum += 1;
 
-        // if (trialnum < 2) {
-        //     nameStim = baseStimVector[0];
-        //     contStim = baseStimVector[1];
-        //     stimuliVector = shuffle(baseStimVector[2]);
-        //     qtypeStim = stimuliVector[fillerRandom];
-            
-        // }
+        nameStim = nameList[trialnum-1];
+        stimuliVector = stimuliList[trialnum-1];
 
-        // else {
-            nameStim = nameList[trialnum-1];
-            stimuliVector = stimuliList[trialnum-1];
+        verbtype = stimuliVector[0];
 
-            verbtype = stimuliVector[0];
+        itemVector = stimuliVector[1];
+        propVector = stimuliVector[2];
+        prosVector = stimuliVector[3];
+        compVector = stimuliVector[4];
 
-            itemVector = stimuliVector[1];
-            propVector = stimuliVector[2];
-            prosVector = stimuliVector[3];
-            compVector = stimuliVector[4];
+        item = itemVector[itemRandom];
+        proposition = propVector[itemRandom];
+        prosody = prosVector[prosRandom][binaryRandom1];
+        complementizer = compVector[binaryRandom2];
 
-            item = itemVector[itemRandom];
-            proposition = propVector[itemRandom];
-            prosody = prosVector[prosRandom][binaryRandom];
-            // complementizer = compVector[compRandom][binaryRandom];
-            complementizer = compVector[binaryRandom];
-
-        // }
                
         $(".item_number").html(trialnum);  
         $(".currentName1").html(nameStim);
 
         $(".veriProposition").html(proposition);
 
+
         // Tell HTML which sound file will be played
         document.getElementById('currentAudio1').src = "http://hosting02.snu.ac.kr/~sunwooj/experiments/veridicality/" + item + "-" + verbtype + "-" + complementizer + "-" +prosody + ".wav";
 
 
-        
-        // Tell HTML which image file will display
-        // document.getElementById('currentCont').src = "../stimuli/" + contStim + ".png";
-
-        // document.getElementById('currentPic').src = "../stimuli/" + qtypeStim + ".png";
-
         document.body.scrollTop = document.documentElement.scrollTop = 0;
 
         showSlide('stage'); 
-        // $('#nextpart').show();
-
-        // // $('#responseForm2').hide();
-        // // $('#optional1').hide();
-        // // $('#commentBox1').hide();
-        // // $('#continue').hide();
-
-        // $('#nextpart').click(function() {
-        //     // if  (slider1.style.backgroundColor != "") {
-        //         $("#nextpart").unbind('click');
-        //         $('#nextpart').hide();
-
-        //         $('#responseForm2').show();
-        //         $('#optional1').show();
-        //         $('#commentBox1').show();
-        //         $('#continue').show();
-
-        //         // $("#warning").html("");
-        //     // }
-
-        //     // else  {
-        //     //     warning = "Please answer the question to continue. Make sure that you have dragged or clicked on the slider button so that the slider is colored and the button displays numeric values.";
-        //     //     $("#warning").html(warning);
-        //     //     document.body.scrollTop = document.body.scrollHeight;
-        //     // }
-        // });
 
 
         $('#continue').click(function() {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
-
-            // var sliderResponse1 = $('#sliderval1').val();
-            // var sliderResponse2 = $('#sliderval2').val();
 
             var natResponse = $('.likertN1:checked').val();
             var veriResponse = $('.likertN2:checked').val();
@@ -529,8 +532,7 @@ function stepExperiment () {
             commentResponse = commentResponse.replace (/,/g, "");
 
 
-            // Check for valid answers; all questions must be answered
-            // if  (slider2.style.backgroundColor != "")
+            // Check for valid answers; 
             if  ($('.likertN1:checked').length > 0 && $('.likertN2:checked').length > 0) {
                 // ensure that likert options are unticked for the next problems 
                 $(".likertN1").prop('checked', false);
@@ -554,17 +556,14 @@ function stepExperiment () {
                 trial.comment = commentResponse;
 
                 data["trial" + trialnum] = trial;
-
-                // Initialize the sliders again
-                //refreshSlider();
             
                 // Move on to the next trial
                 stepExperiment();
      
-                    }
+            }
 
             else { // If any of the questions is not answered:
-                warning = "Please answer the question to continue. Make sure that you have dragged or clicked on the slider button so that the slider is colored and the button displays a numeric value.";
+                warning = "다음 단계로 넘어가기 위해 첫번째와 두번째 문제에 답해주십시오.";
                 $("#warning").html(warning);
                 document.body.scrollTop = document.body.scrollHeight;
             }
