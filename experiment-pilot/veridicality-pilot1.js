@@ -1,6 +1,4 @@
 //(if collecting data with php/server instead of MTurk)
-// Do not use below
-// var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process.php";
 
 var experimentName = "veridicality-pilot";
 var submitAddress = "https://web.stanford.edu/~junhongc/cgi-bin/process.php";
