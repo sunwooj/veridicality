@@ -1,6 +1,7 @@
 //(if collecting data with php/server instead of MTurk)
 var experimentName = "veridicality-pilot1";
-var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process.php";
+// var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process.php";
+var submitAddress = "https://web.stanford.edu/~junhongc/cgi-bin/process.php";
 
 
 // List of stimuli
@@ -11,39 +12,347 @@ var stimuliList = shuffle([
 ["al", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
     [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
-    [ ["geo1", "geo2"], ["jul1", "jul2"], ["go", "go"] ] ],
+    ["geo1", "geo2"] 
+    ],
+
+["al", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["al", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p1", "p2"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["go", "go"]
+    ],
 
 ["al", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
     [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
-    [ ["jul1", "jul2"], ["go", "go"], ["geo1", "geo2"] ] ],
+    ["geo1", "geo2"]
+    ],
+
+["al", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["al", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p1", "p2"] ], 
+    ["go", "go"]
+    ],
 
 ["al", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
     [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
-    [ ["go", "go"], ["geo1", "geo2"], ["jul1", "jul2"] ] ],
+    ["geo1", "geo2"]
+    ],
+
+["al", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["al", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p4", "p4"], ["p1", "p2"], ["p3", "p3"] ], 
+    ["go", "go"]
+    ],
+
 
 ["gieok", ["come", "marry", "painter"], 
     ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
     [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
-    [ ["jul1", "jul2"], ["go", "go"], ["geo1", "geo2"] ] ],
+    ["jul1", "jul2"]
+    ],
+
+["gieok", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["go", "go"]
+    ],
+
+["gieok", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["geo1", "geo2"] 
+    ],
 
 ["gieok", ["marry", "painter", "come"], 
     ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
     [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
-    [ ["go", "go"], ["geo1", "geo2"], ["jul1", "jul2"] ] ],
+    ["jul1", "jul2"] 
+    ],
+
+["gieok", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["go", "go"]
+    ],
+
+["gieok", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["geo1", "geo2"] 
+    ],
 
 ["gieok", ["painter", "come", "marry"], 
     ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
     [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
-    [ ["geo1", "geo2"], ["jul1", "jul2"], ["go", "go"] ] ]
+    ["jul1", "jul2"] 
+    ],
+
+["gieok", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["go", "go"] 
+    ],
+
+["gieok", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["geo1", "geo2"] 
+    ],
+
+
+["mit", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["go", "go"]
+    ],
+
+["mit", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["mit", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["mit", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["go", "go"]
+    ],
+
+["mit", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["mit", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["mit", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["go", "go"]
+    ],
+
+["mit", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["mit", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["jul1", "jul2"]
+    ],
+
+
+["moreu", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["moreu", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["moreu", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["go", "go"]
+    ],
+
+["moreu", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["moreu", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["moreu", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["go", "go"]
+    ],
+
+["moreu", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["moreu", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["moreu", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["go", "go"]
+    ],
+
+
+["ggameok", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["ggameok", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["go", "go"]
+    ],
+
+["ggameok", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["ggameok", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["ggameok", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["go", "go"]
+    ],
+
+["ggameok", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["ggameok", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["ggameok", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["go", "go"]
+    ],
+
+["ggameok", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["geo1", "geo2"]
+    ],
+
+
+["alanae", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["go", "go"]
+    ],
+
+["alanae", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["alanae", ["come", "marry", "painter"], 
+    ["유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다"],
+    [ ["p4", "p4"], ["p2", "p1"], ["p3", "p3"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["alanae", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["go", "go"]
+    ],
+
+["alanae", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["alanae", ["marry", "painter", "come"], 
+    ["태희가 결혼했다고 생각한다", "민우가 화가라고 생각한다", "유라가 왔다고 생각한다"],
+    [ ["p2", "p1"], ["p3", "p3"], ["p4", "p4"] ], 
+    ["jul1", "jul2"]
+    ],
+
+["alanae", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["go", "go"]
+    ],
+
+["alanae", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["geo1", "geo2"]
+    ],
+
+["alanae", ["painter", "come", "marry"], 
+    ["민우가 화가라고 생각한다", "유라가 왔다고 생각한다", "태희가 결혼했다고 생각한다"],
+    [ ["p3", "p3"], ["p4", "p4"], ["p2", "p1"] ], 
+    ["jul1", "jul2"]
+    ]
 
 
 ]);
 
-// names
+
+
+// List of names
+
 var nameList = shuffle([
-    "별이", "지희", "윤아", "숙희", "선아", "화사"
+    "별이", "지희", "윤아", "숙희", "선아", "화사", "미애", "유리", "수아", "설아", 
+    "미나", "지혜", "나래", "은아", "수라", "진아", "영희", "연지", "세아", "민혜",
+    "애리", "민아", "보라", "솔라", "민지", "영자", "연화", "영혜", "마리", "가희",
+    "경아", "정화", "지나", "다예", "다희", "설희", "민희", "영지", "예리", "다라",
+    "도희", "예지", "혜주", "선우", "담비", "지수", "성희", "미라", "슬기", "신애",
+    "유리", "은지", "현서", "제아", "혜미", "영미", "정희", "연희", "수지", "희라",
+    "희애", "희수", "민하", "미혜"
 ]);
 
 
@@ -55,13 +364,20 @@ var trialnum = 0;
 $(document).ready(function() {
     showSlide("intro");
     $('#gotoInstructions').click(function() {
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
-        showSlide('instructions');
+        var consent = document.getElementById("consent").checked;
+        if (consent == true) {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            showSlide('instructions');
+            }
+        else {
+            checkboxwarning = "실험 참여를 위해서는 동의서를 읽어보시고 위 항목을 체크해 동의 의사를 표현해 주시기 바랍니다.";
+            $("#checkboxWarning").html(checkboxwarning);
+        }
     });
 
     
     $('#startbutton').click(function() {
-        stepExperiment();
+        stepExperiment();        
     });
 });
 
@@ -80,7 +396,7 @@ var binaryRandom = Math.floor(Math.random() * 2);
 
 
 function stepExperiment () {
-    if (trialnum == 6) { // end the experiment. 
+    if (trialnum == 54) { // end the experiment. 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
@@ -149,7 +465,8 @@ function stepExperiment () {
             item = itemVector[itemRandom];
             proposition = propVector[itemRandom];
             prosody = prosVector[prosRandom][binaryRandom];
-            complementizer = compVector[compRandom][binaryRandom];
+            // complementizer = compVector[compRandom][binaryRandom];
+            complementizer = compVector[binaryRandom];
 
         // }
                
