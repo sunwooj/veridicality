@@ -2,8 +2,7 @@
 // var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process.php";
 
 var experimentName = "veridicality-pilot";
-// var submitAddress = "https://web.stanford.edu/~junhongc/cgi-bin/process.php";
-var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process.php";
+var submitAddress = "https://web.stanford.edu/~junhongc/cgi-bin/process.php";
 
 
 // List of stimuli
