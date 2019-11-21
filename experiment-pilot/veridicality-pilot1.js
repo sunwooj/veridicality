@@ -543,7 +543,6 @@ function stepExperiment () {
                 $("#warning").html("");
 
                 trial = {};
-                trial.name = nameStim;
                 trial.item = item;
                 trial.verbtype = verbtype;
                 trial.complementizer = complementizer;
