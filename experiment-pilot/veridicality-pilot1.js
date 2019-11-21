@@ -396,7 +396,7 @@ var binaryRandom = Math.floor(Math.random() * 2);
 
 
 function stepExperiment () {
-    if (trialnum == 54) { // end the experiment. 
+    if (trialnum == 4) { // end the experiment. 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
