@@ -1,6 +1,6 @@
 //(if collecting data with php/server instead of MTurk)
 
-var experimentName = "veridicality-pilot2";
+var experimentName = "veridicality-pilot-test";
 var submitAddress = "https://web.stanford.edu/~junhongc/cgi-bin/process.php";
 
 
@@ -444,7 +444,7 @@ var binaryRandom2 = Math.floor(Math.random() * 2);
 
 
 function stepExperiment () {
-    if (trialnum == 46) { // end the experiment. 
+    if (trialnum == 4) { // end the experiment. 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
