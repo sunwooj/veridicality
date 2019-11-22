@@ -4,6 +4,7 @@ var experimentName = "veridicality-pilot2";
 var submitAddress = "https://web.stanford.edu/~junhongc/cgi-bin/process.php";
 
 
+
 // List of stimuli
 
 var stimuliList = shuffle([ 
@@ -455,13 +456,17 @@ function stepExperiment () {
 
             var gend_com = $('#ogen_com').val();
             gend_com = gend_com.replace (/,/g, "");
+            gend_com = gend_com.replace (/:/g, "");
             var reg_com = $('#reg_com').val();
             reg_com = reg_com.replace (/,/g, "");
+            reg_com = reg_com.replace (/:/g, "");
             
             var lang_com = $('#lang_com').val();
             lang_com = lang_com.replace (/,/g, "");
+            lang_com = lang_com.replace (/:/g, "");
             var contact = $('#contact').val();
             contact = contact.replace (/,/g, "");
+            contact = contact.replace (/:/g, "");
 
             // if ($('.gen:checked').length > 0 && $('.age:checked').length > 0 && $('.reg:checked').length > 0) {
 
@@ -477,13 +482,7 @@ function stepExperiment () {
             showSlide('finish');
             setTimeout(function() { turk.submit(data)}, 1000); 
                 
-            // } 
 
-            // else {
-            //     demoWarning = "실험을 마치기 위해 설문지를 체크해 주십시오.";
-            // $("#demoWarning").html(demoWarning);
-            // document.body.scrollTop = document.body.scrollHeight;
-            // }
 
             } ) }
  
@@ -530,6 +529,7 @@ function stepExperiment () {
 
             var commentResponse = $('#commentBox1').val();
             commentResponse = commentResponse.replace (/,/g, "");
+            commentResponse = commentResponse.replace (/:/g, "");
 
 
             // Check for valid answers; 
