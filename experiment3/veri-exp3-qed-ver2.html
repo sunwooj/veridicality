@@ -14,11 +14,11 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 
-<script src="veri-exp3.js"></script>
+<script src="veri-exp3-ver2.js"></script>
 
 <link rel="stylesheet" href="https://sunwooj.github.io/experiments-shared/sliders/jquery-ui.css"></link>
 
-<link href ="veri-exp3.css" rel="stylesheet" type="text/css"/>
+<link href ="../experiments-shared/veri-exp.css" rel="stylesheet" type="text/css"/>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -36,7 +36,7 @@
     <div>
 
 <br>
-<img src="SNU-logo.png" alt="Seoul National University" width="240">
+<img src="../experiments-shared/SNU-logo.png" alt="Seoul National University" width="240">
 <br><br>
 <p class='block-text2'>
 안녕하세요! 실험에 관심을 가져 주셔서 감사합니다. 참여에 앞서 아래 설명문 및 동의서를 읽어 보시기 바랍니다.
@@ -163,7 +163,7 @@
 <form id='audioDisplay1'>
 <br>
 화자인 <span style="font-weight: bold;" class='currentName1'>{{}}</span>는 
-공통 지인인 <span class='currentName2'>{{}}</span>에 대해 다음과 같이 말했습니다: 
+공통 지인인 <span class='currentName2'>{{}}</span>에 대해 이야기 하고 있습니다. <span style="font-weight: bold;" class='currentName1'>{{}}</span>는 다음과 같이 말했습니다: 
 <br><br>
 <audio id="currentAudio1" controls=""><source src="#" type="audio/wav"></audio>
 <br><br>
@@ -175,26 +175,21 @@
 
 <form id='responseForm1'>
 
-<p class='block-text2'>Q: 위에서 들으신 <span class='currentName1'>{{}}</span>의 발화를 어떻게 해석하셨습니까? 둘 중 더 적절한 해석을 골라주세요.
+<p class='block-text2'>Q: 위에서 들으신 <span class='currentName1'>{{}}</span>의 발화는 아래와 같았습니다. 음성으로 들으신 발화에서 아래 밑줄 친 부분을 어떻게 해석하셨습니까? 둘 중 더 적절한 해석을 골라주세요.
+</p>
+
+<p style="text-align: center;">
+<span class='currentName2'>{{}}</span>는 <u><span class='uProposition'>{{}}</span></u> <span class='currentVerb'>{{}}</span>.
 </p>
 
 <div id='PQoption' class='block-text2'>
 
 <label>
-    <input type='radio' class='ctyperes' name='ctyperes' id='optP' value='P' /> 
-    <strong>
-        <span class='currentName2'>{{}}</span>는 
-        <span class='Pint'>{{}}</span>라고 
-        <span class='currentVerb'>{{}}</span>.
-    </strong>
+    <input type='radio' class='ctyperes' name='ctyperes' id='optP' value='P' /> <strong><span class='Pint'>{{}}</span></strong>
 </label>
 
 <label>
-    <input type='radio' class='ctyperes' name='ctyperes' id='optQ' value='Q' /> 
-    <strong>
-        <span class='currentName2'>{{}}</span>는
-        <span class='Qint'>{{}}</span>을 
-        <span class='currentVerb'>{{}}</span>(고 생각한다).</strong>
+    <input type='radio' class='ctyperes' name='ctyperes' id='optQ' value='Q' /> <strong><span class='Qint'>{{}}</span></strong>
 </label>
 
 </div>
@@ -209,14 +204,13 @@
 
 <br>
 
-<p class='block-text2'>Q: 위에서 들으신 발화를 고려했을때, 화자인 <span class='currentName1'>{{}}</span>는 다음 사항이 사실일 것이라고 얼마나 확신한다고
-    생각하십니까?
+<p class='block-text2'>Q: 위에서 들으신 발화를 고려했을때, 화자인 <span class='currentName1'>{{}}</span>는 다음 사항이 사실일 것이라고 얼마나 확신한다고 생각하십니까?
 </p>
 
 <br>
 
 <p style="text-align: center; font-size: 80%;">
-    1점 (전혀 확신하지 않음) - 7점 (매우 확신함) 사이의 점수를 매겨 주십시오.
+1점 (전혀 확신하지 않음) - 7점 (매우 확신함) 사이의 점수를 매겨 주십시오.
 </p>
 
 <p class='center-text'>
@@ -269,11 +263,11 @@
 
 <br>
 
-<p class='block-text2'>Q:
-    <span class='qSitu'>{{}}</span>,
+<p class='block-text2'>Q: 
+    <span class='qSitu'>{{}}</span>, 
     화자인 <span class='currentName1'>{{}}</span>는 이 사실을 압니다.
-    위에서 들으신 <span class='currentName1'>{{}}</span>의 발화를 고려했을때,
-    <span class='currentName1'>{{}}</span>는 다음 사항에 대해 얼마나 확신한다고 생각하십니까?
+    위에서 들으신 <span class='currentName1'>{{}}</span>의 발화를 고려했을때, 
+    <span class='currentName1'>{{}}</span>는 다음 사항에 대해 얼마나 확신한다고 생각하십니까? 
 </p>
 
 <br>
