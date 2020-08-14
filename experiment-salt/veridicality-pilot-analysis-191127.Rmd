@@ -1,0 +1,107 @@
+---
+title: "Veridicality Pilot Analysis"
+author: "Sunwoo Jeong"
+date: "11/27/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+## Data cleanup
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+dat <- read.csv('veridicality-pilot-data-191127.csv')
+dat2 <- read.csv('veridicality-pilot-data-191127-contact.csv')
+head(dat)
+
+contact_dat <- dat2$contact %>% unique
+
+write.csv(contact_dat, file = "contact_info.csv")
+
+
+summary(dat$complementizer)
+summary(dat$prosody)
+
+dat$complementizer <- as.character(dat$complementizer)
+dat$complementizer[dat$complementizer == "2-Jul"] <- "jul2"
+dat$complementizer[dat$complementizer == "1-Jul"] <- "jul1"
+dat$complementizer <- as.factor(dat$complementizer)
+
+dat_t <-
+  dat %>%
+  filter(complementizer != "ctr",
+         complementizer != "geo1",
+         complementizer != "geo2",
+         #complementizer != "go",
+         prosody != "p3")
+
+dat_t$verbtype <- factor(dat_t$verbtype, levels= c("al","moreu", "gieok", "ggameok", "mit", "alanae"))
+
+dat_t$prosody <- as.character(dat_t$prosody)
+dat_t$prosody[dat_t$prosody == "p1"] <- "ES"
+dat_t$prosody[dat_t$prosody == "p2"] <- "EV"
+dat_t$prosody[dat_t$prosody == "p4"] <- "MV"
+dat_t$prosody <- as.factor(dat_t$prosody)
+
+dat_s <- dat_t %>%
+  group_by(verbtype, complementizer, prosody) %>%
+  summarise(meanNat = mean(naturalness),
+            meanVer = mean(veridicality),
+            n = n(),
+            sdNat = sd(naturalness), 
+            sdVer = sd(veridicality),
+            seNat = sdNat/sqrt(n),
+            seVer = sdVer/sqrt(n))
+dat_s
+
+p <- dat_s %>%
+  ggplot(aes(x = prosody, y = meanVer, fill = prosody)) + 
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin=meanVer-seVer, ymax=meanVer+seVer),
+                width=.2,                    # Width of the error bars
+                position=position_dodge(.9)) +
+  facet_grid(complementizer ~ verbtype) +
+  # ggthemes::theme_few() + 
+  theme_bw() +
+  theme(axis.title.y=element_text(size=14), 
+        axis.title.x=element_blank()) + labs(y='Mean Veridicality Ratings') +
+  scale_fill_manual(values = c("#D55E00", "#009E73", "#56B4E9")) +
+  theme(legend.position="none")
+
+ggsave("pilot-visualization2.eps", width=7.8,height=4.2)
+
+
+p2 <- dat_s %>%
+  ggplot(aes(x = prosody, y = meanNat, fill = prosody)) + 
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin=meanNat-seNat, ymax=meanNat+seNat),
+                width=.2,                    # Width of the error bars
+                position=position_dodge(.9)) +
+  facet_grid(complementizer ~ verbtype) +
+  # ggthemes::theme_few() + 
+  theme_bw() +
+  theme(axis.title.y=element_text(size=14), 
+        axis.title.x=element_blank()) + labs(y='Mean Naturalness Ratings') +
+  scale_fill_manual(values = c("#D55E00", "#009E73", "#56B4E9")) +
+  theme(legend.position="none")
+
+p2
+
+dat$uniqueIdentifier %>% unique %>% length
+# 71 subjects
+```
+
+## 
+
+You can also embed plots, for example:
+
+```{r}
+library(lme4)
+```
+

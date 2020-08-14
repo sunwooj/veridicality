@@ -1,0 +1,282 @@
+---
+title: "Veridicality Pilot Analysis"
+author: "Sunwoo Jeong"
+date: "11/27/2019"
+output: html_document
+---
+
+## Data cleanup \& Organization
+
+```{r setup, include=FALSE}
+## Call in necessary packages
+library(tidyverse)
+library(ordinal)
+
+## Data clean-up and wrangling
+## No need to re-run this section if accessing and working directly with the tidy data ()
+# Call in raw data and inspect key factors
+dat <- read.csv('veridicality-pilot-data-191127.csv')
+head(dat)
+summary(dat$complementizer)
+summary(dat$prosody)
+summary(dat$item)
+
+## Notes on control trials 
+## (indexed with numbers as levels in 'prosody' column, which keeps track of prosodic conditions for target trials)
+# c1, c2: natural, entailment/presupposition
+# c5, c6: natural, contradiction/non-entailment
+# c7, c8: unnatural, entailment/presupposition
+# c9, c10: unnatural, contradiction/non-entailment
+
+```
+
+
+
+
+```{r, eval=FALSE}
+
+
+
+
+# Number of participants: 71
+dat$subjectID <- as.factor(dat$subjectID)
+dat$subjectID %>% 
+  unique %>% length
+
+dat$complementizer <- as.character(dat$complementizer)
+dat$complementizer[dat$complementizer == "2-Jul"] <- "jul2"
+dat$complementizer[dat$complementizer == "1-Jul"] <- "jul1"
+dat$complementizer <- as.factor(dat$complementizer)
+
+dat$complementizer2 <- dat$complementizer
+dat$complementizer2 <- as.character(dat$complementizer2)
+dat$complementizer2[dat$complementizer2 == "jul1"] <- "jul"
+dat$complementizer2[dat$complementizer2 == "jul2"] <- "jul"
+dat$complementizer2[dat$complementizer2 == "geo1"] <- "geot"
+dat$complementizer2[dat$complementizer2 == "geo2"] <- "geot"
+dat$complementizer2 <- as.factor(dat$complementizer2)
+
+# Natural/true controls
+dat_ntc <-
+  dat %>%
+  filter(prosody == "c1" | prosody == "c2")
+
+dat_ntc$inftype <- "T"
+dat_ntc$inftype <- as.factor(dat_ntc$inftype)
+summary(dat_ntc$inftype)
+
+# Natural/false controls
+dat_nfc <-
+  dat %>%
+  filter(prosody == "c5" | prosody == "c6")
+
+dat_nfc$inftype <- "F"
+dat_nfc$inftype <- as.factor(dat_nfc$inftype)
+summary(dat_nfc$inftype)
+
+# Natural controls
+
+dat_nc <- rbind(dat_ntc, dat_nfc)
+
+# Natural controls: Mean validity of inference
+
+dat_m_nc <- dat_nc %>%
+  group_by(inftype) %>%
+  summarise(meanVer = mean(veridicality),
+            n = n(),
+            sdVer = sd(veridicality),
+            seVer = sdVer/sqrt(n))
+
+# Entailment: 6.5
+# Contradiction: 2.14
+
+true_base_n <- 6.5
+false_base_n <- 2.14
+
+# Unnatural/true controls
+dat_utc <-
+  dat %>%
+  filter(prosody == "c7" | prosody == "c8")
+
+dat_utc$inftype <- "T"
+dat_utc$inftype <- as.factor(dat_utc$inftype)
+summary(dat_utc$inftype)
+
+# Unnatural/false controls
+dat_ufc <-
+  dat %>%
+  filter(prosody == "c9" | prosody == "c10")
+
+dat_ufc$inftype <- "F"
+dat_ufc$inftype <- as.factor(dat_ufc$inftype)
+summary(dat_ufc$inftype)
+
+# Unatural controls
+
+dat_uc <- rbind(dat_utc, dat_ufc)
+
+# All controls
+
+dat_c <- rbind(dat_nc, dat_uc)
+summary(dat_c$verbtype)
+
+# Controls: Mean naturalness
+
+dat_m_c <- dat_c %>%
+  group_by(verbtype) %>%
+  summarise(meanNat = mean(naturalness),
+            n = n(),
+            sdNat = sd(naturalness), 
+            seNat = sdNat/sqrt(n))
+
+# Natural controls: 6.61
+# Unnatural controls: 2.38
+
+unn_base <- 2.38
+nat_base <- 6.61
+
+# Controls: Mean veridicality
+
+dat_m2_c <- dat_c %>%
+  group_by(inftype) %>%
+  summarise(meanNat = mean(veridicality),
+            n = n(),
+            sdVer = sd(veridicality), 
+            seVer = sdVer/sqrt(n))
+dat_m2_c
+
+true_base <- 5.74
+false_base <- 2.5
+
+# Natural controls: 6.61
+# Unnatural controls: 2.38
+
+unn_base <- 2.38
+nat_base <- 6.61
+
+# Controls: Mean veridicality & naturalness
+
+dat_m3_c <- dat_c %>%
+  group_by(inftype, verbtype) %>%
+  summarise(meanNat = mean(naturalness),
+            meanVer = mean(veridicality),
+            n = n(),
+            sdNat = sd(naturalness), 
+            sdVer = sd(veridicality),
+            seNat = sdNat/sqrt(n),
+            seVer = sdVer/sqrt(n))
+dat_m3_c
+
+# validity judgment significantly lowered for T controls when they are unnatural
+
+
+dat_t <-
+  dat %>%
+  filter(complementizer != "ctr",
+         complementizer != "geo1",
+         complementizer != "geo2",
+         #complementizer != "go",
+         prosody != "p3")
+
+dat_t$verbtype <- factor(dat_t$verbtype, levels= c("al","moreu", "gieok", "ggameok", "mit", "alanae"))
+
+dat_t$complementizer2 <- factor(dat_t$complementizer2, levels= c("jul","go"))
+
+dat_go <- 
+  dat_t %>%
+  filter(complementizer2 == "go")
+dat_jul <-
+  dat_t %>%
+  filter(complementizer2 == "jul")
+
+dat_t$prosody <- as.character(dat_t$prosody)
+dat_t$prosody[dat_t$prosody == "p1"] <- "ES"
+dat_t$prosody[dat_t$prosody == "p2"] <- "EV"
+dat_t$prosody[dat_t$prosody == "p4"] <- "MV"
+dat_t$prosody <- as.factor(dat_t$prosody)
+
+dat_s <- dat_t %>%
+  group_by(verbtype, complementizer2, prosody) %>%
+  summarise(meanNat = mean(naturalness),
+            meanVer = mean(veridicality),
+            n = n(),
+            sdNat = sd(naturalness), 
+            sdVer = sd(veridicality),
+            seNat = sdNat/sqrt(n),
+            seVer = sdVer/sqrt(n))
+dat_s
+
+# 680 * 440
+p <- dat_s %>%
+  ggplot(aes(x = prosody, y = meanVer, fill = prosody)) + 
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin=meanVer-seVer, ymax=meanVer+seVer),
+                width=.2,                    # Width of the error bars
+                position=position_dodge(.9)) +
+  facet_grid(complementizer2 ~ verbtype) +
+  # ggthemes::theme_few() + 
+  theme_bw() +
+  theme(axis.title.y=element_text(size=14), 
+        axis.title.x=element_blank()) + labs(y='Mean Veridicality Ratings') +
+  scale_fill_manual(values = c("#D55E00", "#009E73", "#56B4E9")) +
+  theme(legend.position="none") +
+  theme(strip.text.x = element_text(size = 10), strip.text.y = element_text(size = 10)) +
+  geom_hline(yintercept=true_base, linetype="dashed", 
+                color = "#F0E442", size=1.2) + 
+  geom_hline(yintercept=false_base, linetype="dashed", 
+                color = "#999999", size=1.2)
+
+ggsave("pilot-visualization2.eps", width=7.8,height=4.2)
+
+
+p2 <- dat_s %>%
+  ggplot(aes(x = prosody, y = meanNat, fill = prosody)) + 
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin=meanNat-seNat, ymax=meanNat+seNat),
+                width=.2,                    # Width of the error bars
+                position=position_dodge(.9)) +
+  facet_grid(complementizer2 ~ verbtype) +
+  # ggthemes::theme_few() + 
+  theme_bw() +
+  theme(axis.title.y=element_text(size=14), 
+        axis.title.x=element_blank()) + labs(y='Mean Naturalness Ratings') +
+  scale_fill_manual(values = c("#D55E00", "#009E73", "#56B4E9")) +
+  theme(legend.position="none") +
+  theme(strip.text.x = element_text(size = 10), strip.text.y = element_text(size = 10)) 
+
++
+  geom_hline(yintercept=nat_base, linetype="dashed", 
+                color = "#F0E442", size=1.2) + 
+  geom_hline(yintercept=unn_base, linetype="dashed", 
+                color = "#999999", size=1.2)
+
+p2
+
+dat$subjectID %>% unique %>% length
+# 71 subjects
+```
+
+## 
+
+You can also embed plots, for example:
+
+```{r}
+library(lme4)
+
+dat_jul <-
+  dat %>%
+  filter(complementizer == "jul1",
+         complementizer == "jul2")
+
+dat_jul$veridicality <- as.factor(dat_jul$veridicality)
+
+dat_jul$veridicality <- as.factor(dat_jul$veridicality)
+
+dat_jul$verbtype <- relevel(dat_jul$verbtype, 'mit')
+dat_jul$verbtype <- relevel(dat_jul$verbtype, 'moreu')
+dat_jul$verbtype <- relevel(dat_jul$verbtype, 'al')
+
+m1 <- clmm(veridicality ~ prosody * verbtype + (1|item) + (1|subjectID), data=dat_jul)
+summary(m1)
+```
+
