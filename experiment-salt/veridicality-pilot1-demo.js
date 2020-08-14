@@ -514,7 +514,7 @@ function stepExperiment () {
 
 
         // Tell HTML which sound file will be played
-        document.getElementById('currentAudio1').src = "http://hosting02.snu.ac.kr/~sunwooj/experiments/veridicality/" + item + "-" + verbtype + "-" + complementizer + "-" +prosody + ".wav";
+        document.getElementById('currentAudio1').src = "https://sunwoojeong.com/experiments/salt-pilot/" + item + "-" + verbtype + "-" + complementizer + "-" +prosody + ".wav";
 
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
