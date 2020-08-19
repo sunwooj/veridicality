@@ -1,7 +1,8 @@
 //(if collecting data with php/server instead of MTurk)
 
-// var experimentName = "veri-ucdec-pilot";
-// var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process2.php";
+var experimentName = "veri-ucdec-pilot-test";
+var submitAddress = "http://sunwoojeong.com/cgi-bin/process.php";
+// "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process2.php";
 
 
 
@@ -101,7 +102,7 @@ var prosRandom = Math.floor(Math.random() * 2);
 
 
 function stepExperiment () {
-    if (trialnum == 20) { // end the experiment. 
+    if (trialnum == 4) { // end the experiment. 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
