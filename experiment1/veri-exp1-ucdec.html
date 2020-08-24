@@ -89,7 +89,7 @@
 10. 이 연구에 참가하면 사례가 지급됩니까?
 <br>
 <!-- 추후 조정 -->
-귀하의 연구 참여시 감사의 뜻으로 스타벅스 커피 기프티콘이 증정될 것입니다. 
+귀하의 연구 참여시 감사의 뜻으로 스타벅스 커피 기프티콘이 이미 증정되었거나, 앞으로 증정될 것입니다. 
 기프티콘은 귀하의 휴대폰으로 발송됩니다.                   
 <br><br>
 11. 연구에 대한 문의는 어떻게 해야 됩니까?
@@ -162,8 +162,9 @@
 <!-- Audio stimulus1 displayed here -->
 <form id='audioDisplay1'>
 <br>
-화자인 <span style="font-weight: bold;" class='currentName1'>{{}}</span>는 
-공통 지인인 <span class='currentName2'>{{}}</span>에 대해 다음과 같이 말했습니다: 
+화자인 <span style="font-weight: bold;" class='currentName1'>{{}}</span>는  
+<!-- 지인인 <span class='currentName2'>{{}}</span>에 대해 -->
+다음과 같이 말했습니다: 
 <br><br>
 <audio id="currentAudio1" controls=""><source src="#" type="audio/wav"></audio>
 <br><br>
@@ -174,15 +175,17 @@
 
 <form id='responseForm2'>
 
-<p class='block-text2'>Q: 위에서 들으신 발화를 고려했을때, 화자인 <span class='currentName1'>{{}}</span>는 다음 사항이 사실일 것이라고 얼마나 확신한다고 생각하십니까?
+<p class='block-text2'>Q: 위에서 들으신 발화를 고려했을때, 
+<span style="font-weight: bold;" class='currentName1'>{{}}</span>는 다음 사항이 사실일 것이라고 얼마나 확신한다고 생각하십니까?
 </p>
 
-<br>
 
 <p style="text-align: center; font-size: 80%;">
-1점 (전혀 확신하지 않음) - 7점 (매우 확신함) 사이의 점수를 매겨
-주십시오.
+&lsquo;1점: 사실일 것이라 전혀 확신하지 않음 (사실이 아닐 것이라 생각함)&rsquo; 에서 <br> &lsquo;7점: 사실일 것이라 매우 확신함&rsquo; 사이의 점수를 매겨 주십시오.
+</span>
 </p>
+
+
 
 <p class='center-text'>
     <!-- 화자인 <span class='currentName1'>{{}}</span>는 다음을 확신한다: <br>  -->
@@ -233,7 +236,7 @@
 
 
 <!-- Optional responses -->
-<p id='optional1' class='block-text2'>(선택 답변) 그 밖에 이 문제들에 관해 하시고 싶으신 말씀이 있으십니까?</p>
+<p id='optional1' class='block-text2'>[선택 답변] 그 밖에 위 녹음이나 문제에 관해 하시고 싶으신 말씀이 있으십니까?</p>
 
 <input type='text' id="commentBox1" class="commentBox" style="width: 400px;" value="" />
 
@@ -245,7 +248,7 @@
 <button type='button' id='continue'>다음 질문으로 계속</button>
 
 
-<p><span style="font-weight: bold; color: #8C1515;"> 음성 파일 20개 중 <span class="item_number">{{}}</span> 번째</span></p>
+<!-- <p><span style="font-weight: bold; color: #8C1515;"> 음성 파일 20개 중 <span class="item_number">{{}}</span> 번째</span></p> -->
 
         </div>
     </div>
@@ -329,7 +332,7 @@
 
 
 <form id='contactForm'>
-<p class='questionSent'>6. 사례품 (스타벅스 기프티콘) 전송 여부를 확인하기 위해 귀하의 휴대폰 번호가 필요합니다. 이 번호는 기프티콘 처리 확인 후 즉시 폐기되고 제 3자와 공유되지 않습니다. 사례품 지급을 위해 귀하의 휴대폰 번호를 남겨주시기 바랍니다.
+<p class='questionSent'>6. 만일 사례품(스타벅스 기프티콘)을 아직 받지 않으셨다면, 사례품 전송을 위해 귀하의 휴대폰 번호가 필요합니다. 이 번호는 기프티콘 처리 확인 후 즉시 폐기되고 제 3자와 공유되지 않습니다. 만일 사례품을 이미 받으셨다면 추후 기프티콘이 추가 제공되는 다른 실험에 참여 의사가 있으신지 간단히 의향을 남겨주시면 감사하겠습니다. (참여 의사를 표명하셨어도 그 때 가서 실험의 성격 및 본인의 일정에 따라 참여 여부를 자유로이 변경하실 수 있습니다.)
 <br>
 <input type='text' id='contact' value="" />
 </p>

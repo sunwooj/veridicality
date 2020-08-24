@@ -1,6 +1,6 @@
 //(if collecting data with php/server instead of MTurk)
 
-var experimentName = "veri-ucdec-pilot-test";
+var experimentName = "veri-ecpq-pilot-test";
 var submitAddress = "http://sunwoojeong.com/cgi-bin/process.php";
 // "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process2.php";
 
@@ -21,7 +21,7 @@ var stimuliList = shuffle([
 
 ["widow", "윤혜", "의원이 미망인이다", ["gieok", "ggameok", "mit", "uishim", "al", "moreu"], ["nv", "mv"], ["ev", "mv"]],
 
-["socks", "민석이", "양말이 어른용이다", ["gieok", "ggameok", "mit", "uishim", "al", "moreu"], ["mv", "nv"], ["mv", "ev"]],
+["socks", "민식이", "양말이 어른용이다", ["gieok", "ggameok", "mit", "uishim", "al", "moreu"], ["mv", "nv"], ["mv", "ev"]],
 
 ["echo", "유민이", "메아리가 울린다", ["ggameok", "mit", "uishim", "al", "moreu", "gieok"], ["nv", "mv"], ["es", "mv"]],
 
@@ -35,17 +35,17 @@ var stimuliList = shuffle([
 
 ["year", "윤호", "내란이 을미년에 일어났다", ["uishim", "al", "moreu", "gieok", "ggameok", "mit"], ["mv", "nv"], ["mv", "ed"]],
 
-["age", "수영이", "서현이는 수영이보다 나이가 많다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["false", "false"], ["false", "false"]],
+["age", "수영이", "수영이는 서현이보다 나이가 많다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["true", "true"], ["true", "true"]],
 
-["conch", "진희", "진희는 소라를 키우지 않는다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["false", "false"], ["false", "false"]],
+["conch", "진희", "진희는 소라게를 키우고 있다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["false", "false"], ["false", "false"]],
 
-["exam", "슬기", "슬기는 시험에서 80점 이하의 점수를 받았다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["false", "false"], ["false", "false"]],
+["exam", "슬기", "슬기는 시험에서 90점이 넘는 점수를 받았다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["false", "false"], ["false", "false"]],
 
-["gift", "지현이", "지현이는 어제 집들이 선물을 가져오지 않았다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["false", "false"], ["false", "false"]],
+["smoke", "정우", "정우는 아직도 담배를 핀다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["false", "false"], ["false", "false"]],
 
-["height", "준홍이", "홍석이는 준홍이보다 키가 작다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["true", "true"], ["true", "true"]],
+["height", "준홍이", "준홍이는 홍석이보다 키가 크다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["true", "true"], ["true", "true"]],
 
-["pasta", "예은이", "예은이는 파스타에 명란젓을 넣었다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["true", "true"], ["true", "true"]],
+["pasta", "예은이", "예은이는 파스타에 명란젓을 넣었다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["false", "false"], ["false", "false"]],
 
 ["pen", "지민이", "지민이는 만년필의 주인이다", ["filler", "filler", "filler", "filler", "filler", "filler"], ["true", "true"], ["true", "true"]],
 
@@ -169,7 +169,7 @@ function stepExperiment () {
 
 
         // Tell HTML which sound file will be played
-        document.getElementById('currentAudio1').src = "https://sunwoojeong.com/experiments/exp1/" + item + "-" + verbtype + "-" + "dec" + "-" +prosody + ".wav";
+        document.getElementById('currentAudio1').src = "https://sunwoojeong.com/experiments/exp2/" + item + "-" + verbtype + "-" + "pq" + "-" +prosody + ".wav";
         // "http://hosting02.snu.ac.kr/~sunwooj/experiments/veridicality/exp1/"
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
