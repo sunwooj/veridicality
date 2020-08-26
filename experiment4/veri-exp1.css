@@ -117,14 +117,6 @@ td {
   margin-bottom: 1em;
 }
 
-.block-bold-text {
-  font-weight: bold;  
-  width: 540px;
-  text-align: justify;
-  margin: 0 auto;
-  margin-bottom: 1em;
-}
-
 .scrollbox {
     width: 520px;
     height: 200px;
