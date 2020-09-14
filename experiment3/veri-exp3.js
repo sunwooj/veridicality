@@ -4,7 +4,7 @@ var experimentName = "veri-qed-pilot-test";
 var submitAddress = "http://sunwoojeong.com/cgi-bin/process-korean.php";
 // "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process2.php";
 
-
+var uniqueNumber = Math.floor(100000 + Math.random() * 900000);
 
 // List of stimuli
 
@@ -226,7 +226,7 @@ var polRandom = Math.floor(Math.random() * 2);
 
 
 function stepExperiment () {
-    if (trialnum == 12) { // end the experiment. 
+    if (trialnum == 4) { // end the experiment. CHANGE LATER TO 12
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
