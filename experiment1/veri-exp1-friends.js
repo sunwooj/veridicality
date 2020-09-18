@@ -1,7 +1,7 @@
 //(if collecting data with php/server instead of MTurk)
 
-var experimentName = "veri-ucdec-pilot-test";
-var submitAddress = "http://sunwoojeong.com/cgi-bin/process.php";
+var experimentName = "veri-ucdec-pilot-server";
+var submitAddress = "http://sunwoojeong.com/cgi-bin/process-korean.php";
 // "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process2.php";
 
 
@@ -128,6 +128,14 @@ function stepExperiment () {
             gen_com = gen_com.replace(/,/g, "");
             gen_com = gen_com.replace(/:/g, "");
 
+            var pool = $('.pool:checked').val();
+            var cell = $('#cell_com').val();
+            cell = cell.replace(/,/g, "");
+            cell = cell.replace(/:/g, "");
+            var mail = $('#mail_com').val();
+            mail = mail.replace(/,/g, "");
+            mail = mail.replace(/:/g, "");
+
             // if ($('.gen:checked').length > 0 && $('.age:checked').length > 0 && $('.reg:checked').length > 0) {
 
             data.gender = gender;
@@ -140,7 +148,12 @@ function stepExperiment () {
             data.langCom = lang_com;
             data.contact = contact;
 
-            showSlide('finish');
+            data.pool = pool;
+            data.cell = cell;
+            data.mail = mail;
+
+
+            // showSlide('finish');
             setTimeout(function() { turk.submit(data)}, 1000); 
 
             } ) }

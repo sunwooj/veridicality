@@ -1,6 +1,6 @@
 //(if collecting data with php/server instead of MTurk)
 
-var experimentName = "veri-conttext-pilot-test";
+var experimentName = "new-server-test";
 var submitAddress = "http://sunwoojeong.com/cgi-bin/process.php";
 // "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process2.php";
 
