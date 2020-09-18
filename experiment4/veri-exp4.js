@@ -209,7 +209,7 @@ var contRandom = Math.floor(Math.random() * 4);
 
 
 function stepExperiment () {
-    if (trialnum == 12) { // end the experiment. 
+    if (trialnum == 4) { // end the experiment. 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
