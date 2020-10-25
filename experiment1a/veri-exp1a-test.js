@@ -1,8 +1,8 @@
 //(if collecting data with php/server instead of MTurk)
 
-var experimentName = "veri-ucdec-pilot-server";
-var submitAddress = "http://sunwoojeong.com/cgi-bin/process-korean.php";
-// "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process2.php";
+var experimentName = "test";
+var submitAddress = "test";
+var payment = "test";
 
 
 
@@ -102,7 +102,7 @@ var prosRandom = Math.floor(Math.random() * 2);
 
 
 function stepExperiment () {
-    if (trialnum == 20) { // end the experiment. 
+    if (trialnum == 20) { // CHANGE TO 20 LATER
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
@@ -128,14 +128,6 @@ function stepExperiment () {
             gen_com = gen_com.replace(/,/g, "");
             gen_com = gen_com.replace(/:/g, "");
 
-            var pool = $('.pool:checked').val();
-            var cell = $('#cell_com').val();
-            cell = cell.replace(/,/g, "");
-            cell = cell.replace(/:/g, "");
-            var mail = $('#mail_com').val();
-            mail = mail.replace(/,/g, "");
-            mail = mail.replace(/:/g, "");
-
             // if ($('.gen:checked').length > 0 && $('.age:checked').length > 0 && $('.reg:checked').length > 0) {
 
             data.gender = gender;
@@ -148,12 +140,7 @@ function stepExperiment () {
             data.langCom = lang_com;
             data.contact = contact;
 
-            data.pool = pool;
-            data.cell = cell;
-            data.mail = mail;
-
-
-            // showSlide('finish');
+            showSlide('finish');
             setTimeout(function() { turk.submit(data)}, 1000); 
 
             } ) }
@@ -182,8 +169,9 @@ function stepExperiment () {
 
 
         // Tell HTML which sound file will be played
-        document.getElementById('currentAudio1').src = "https://sunwoojeong.com/experiments/exp1/" + item + "-" + verbtype + "-" + "dec" + "-" +prosody + ".wav";
-        // "http://hosting02.snu.ac.kr/~sunwooj/experiments/veridicality/exp1/"
+        document.getElementById('currentAudio1').src = 
+        // "exp1a-stimuli/" + item + "-" + verbtype + "-" + "dec" + "-" +prosody + ".wav";
+        "https://sunwoojeong.com/experiments/veridicality/exp1a/exp1a-stimuli/" + item + "-" + verbtype + "-" + "dec" + "-" + prosody + ".wav";
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
 
