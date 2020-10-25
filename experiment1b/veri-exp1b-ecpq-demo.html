@@ -6,12 +6,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <!-- FOR PHP DATA GATHERING -->
-<script type="text/javascript" src="https://sunwoojeong.com/experiments/experiments-shared/server-extension.js"></script> 
+<script type="text/javascript" src="https://sunwoojeong.com/experiments/experiments-shared/server-extension.js"></script>
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 
-<script src="veri-exp1a-test.js"></script>
+<script src="veri-exp1b-demo.js"></script>
 
 <!-- <link rel="stylesheet" href="https://sunwooj.github.io/experiments-shared/sliders/jquery-ui.css"></link> -->
 
@@ -33,7 +33,7 @@
     <div>
 
 <br>
-<img src="https://sunwooj.github.io/veridicality/experiments-shared/SNU-logo.png" alt="Seoul National University" width="240">
+<img src="https://sunwoojeong.com/experiments/experiments-shared/SNU-logo.png" alt="Seoul National University" width="240">
 <br><br>
 <p class='block-text2'>
 안녕하세요! 실험에 관심을 가져 주셔서 감사합니다. 참여에 앞서 아래 설명문 및 동의서를 읽어 보시기 바랍니다.
@@ -60,7 +60,8 @@
 3. 만일 연구에 참여하면 어떤 과정이 진행됩니까?
 <br>
 만일 귀하가 참여의사를 밝혀 주시면 다음과 같은 과정이 진행될 것입니다. 온라인상에서의 참여의사를 밝혀주시면 귀하는 4초 이내의 짧은 음성 파일들을 클릭해 한국어 발화들을 듣게 될 것입니다. 각 발화 내용을
-들은 후 그 발화를 어떻게 해석하였는지에 대해 답변하는 설문이 진행될 것입니다. 각 발화 당 총 하나의 질문에 답하실 것이며 총 20개의 발화들을 듣게 될 것입니다 (더불어 그밖에 하시고 싶으신 말씀이 있으시면 자유 기고 방식으로 기입하는 두 번째 질문에 답하셔도 됩니다). 설문은 귀하가 원하는 인터넷이 가능한 모든 장소에서 참여가 가능합니다. 다만 집중해서 음성파일들을 들으실
+들은 후 그 발화를 어떻게 해석하였는지에 대해 답변하는 설문이 진행될 것입니다. 각 발화 당 총 하나의 질문에 답하실 것이며 총 20개의 발화들을 듣게 될 것입니다 (더불어 그밖에 하시고 싶으신 말씀이
+있으시면 자유 기고 방식으로 기입하는 두 번째 질문에 답하셔도 됩니다). 설문은 귀하가 원하는 인터넷이 가능한 모든 장소에서 참여가 가능합니다. 다만 집중해서 음성파일들을 들으실
 수 있게 조용한 곳에서 헤드폰이나 이어폰을 착용하시고 설문을 진행하시길 권장 드립니다. 참여하시는 순간부터 모든 데이터는 자동으로 저장됩니다. 모든 문항에 차례로 응답하여야 다음 순서로 넘어갈 수 있으며
 마지막 문항까지 모두 응답하셔야 데이터 분석에 사용가능합니다. 만약 중간에 응답을 원하지 않으시면 언제라도 바로 중지하실 수 있으시며 원하시면 언제든지 중지하셔도 됩니다. 설문 중지에 따른 불이익은 전혀
 발생되지 않으며 중단하실 경우 모든 데이터는 바로 자동 삭제되어 데이터에 포함되지 않습니다. 발화 해석/판단 설문 이후 끝에 간단히 귀하의 성별, 연령, 구사하는 언어 및 출신지역을 여쭙는 간단한 설문이 진행
@@ -174,7 +175,7 @@
 <form id='audioDisplay1'>
 <br>
 화자인 <span style="font-weight: bold;" class='currentName1'>{{}}</span>는  
-<!-- 지인인 <span class='currentName2'>{{}}</span>에 대해 -->
+<!-- 지인인 <span class='currentName2'>{{}}</span>에 대해  -->
 다음과 같이 말했습니다: 
 <br><br>
 <audio id="currentAudio1" controls=""><source src="#" type="audio/wav"></audio>
@@ -277,7 +278,7 @@
 <form id='languageForm'>
 
 <p class='questionSent'> 
-실험 참여를 마치시기 위해 마지막으로 아래 설문을 간단히 작성해 주시기 바랍니다. 
+실험 참여를 마치시기 위해 마지막으로 아래 설문을 간단히 작성해 주시기 바랍니다.
 </p> <br>
 
 
@@ -292,7 +293,6 @@
 </form>
 
 
-
 <form id='ageForm'>
 <p class='questionSent'> 2. 귀하의 나이는 어떻게 되십니까?
 <br>
@@ -303,6 +303,7 @@
 <input type='radio' class='age' name='ageC' id='60s' value='60s' /> 60대 이상 <br>
 </p>
 </form>
+
 
 
 
@@ -321,6 +322,7 @@
 
 
 
+
 <form id='ethnicityForm'>
 <p class='questionSent'> 4. 귀하께서 한국어 이외에 구사하시는 언어가 있으십니까? 있으시다면 구사하시는 언어들을 모두 적어주시기 바랍니다.
 <br>
@@ -330,12 +332,14 @@
 
 
 
+
 <form id='commentsForm'>
 <p class='questionSent'>5. 그 밖에 실험에 대해 하시고 싶으신 말씀이나 의견이 있으십니까? 있으시다면 아래에 의견을 남겨 주시기 바랍니다.
 <br>
 <input type='text' id='gen_com' value="" />
 </p>
 </form>
+
 
 
 
@@ -362,7 +366,7 @@
 
 
 <div class='slide' id='finish'>
-<p>실제 실험이라면 결과로 전송되었을 값들이 곧 게시됩니다!</p>
+    <p>실제 실험이라면 결과로 전송되었을 값들이 곧 게시됩니다!</p>
 </div>
 
 
