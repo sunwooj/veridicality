@@ -1,7 +1,8 @@
 //(if collecting data with php/server instead of MTurk)
 
-var experimentName = "veridicality-pilot2";
-var submitAddress = "https://web.stanford.edu/~junhongc/cgi-bin/process.php";
+var experimentName = "test";
+var submitAddress = "test";
+var payment = "test";
 
 
 
@@ -419,7 +420,7 @@ $(document).ready(function() {
             showSlide('instructions');
             }
         else {
-            checkboxwarning = "실험 참여를 위해서는 동의서를 읽어보시고 위 항목을 체크해 동의 의사를 표현해 주시기 바랍니다.";
+            checkboxwarning = "실험 참여를 위해서는 동의서를 읽어보시고 '예'를 체크해 동의 의사를 표현해 주시기 바랍니다.";
             $("#checkboxWarning").html(checkboxwarning);
         }
     });
@@ -513,7 +514,9 @@ function stepExperiment () {
 
 
         // Tell HTML which sound file will be played
-        document.getElementById('currentAudio1').src = "http://hosting02.snu.ac.kr/~sunwooj/experiments/veridicality/" + item + "-" + verbtype + "-" + complementizer + "-" +prosody + ".wav";
+        document.getElementById('currentAudio1').src = 
+        //"http://hosting02.snu.ac.kr/~sunwooj/experiments/veridicality/" 
+        "https://sunwoojeong.com/experiments/veridicality/salt-pilot/" + item + "-" + verbtype + "-" + complementizer + "-" +prosody + ".wav";
 
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;

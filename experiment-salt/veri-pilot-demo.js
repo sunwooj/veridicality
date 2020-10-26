@@ -1,7 +1,8 @@
 //(if collecting data with php/server instead of MTurk)
 
-// var experimentName = "veridicality-pilot-test";
-// var submitAddress = "http://hosting02.snu.ac.kr/~sunwooj/cgi-bin/process2.php";
+var experimentName = "test";
+var submitAddress = "test";
+var payment = "test";
 
 
 
@@ -514,7 +515,7 @@ function stepExperiment () {
 
 
         // Tell HTML which sound file will be played
-        document.getElementById('currentAudio1').src = "https://sunwoojeong.com/experiments/salt-pilot/" + item + "-" + verbtype + "-" + complementizer + "-" +prosody + ".wav";
+        document.getElementById('currentAudio1').src = "https://sunwoojeong.com/experiments/veridicality/salt-pilot/" + item + "-" + verbtype + "-" + complementizer + "-" + prosody + ".wav";
 
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;

@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="https://sunwooj.github.io/experiments-shared/sliders/jquery-ui.css"></link>
 
-<link href ="veridicality.css" rel="stylesheet" type="text/css"/>
+<link href ="../experiments-shared/veri-exp.css" rel="stylesheet" type="text/css"/>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -36,8 +36,7 @@
     <div>
 
 <br>
-<img src="SNU-logo.png" alt="Seoul National University" width="240">
-<!-- https://github.com/sunwooj/experiments-shared/SNU-logo.png -->
+<img src="https://sunwooj.github.io/veridicality/experiments-shared/SNU-logo.png" alt="Seoul National University" width="240">
 <br><br>
 <p class='block-text2'>
 안녕하세요! 실험에 관심을 가져 주셔서 감사합니다. 참여에 앞서 아래 설명문 및 동의서를 읽어 보시기 바랍니다.
@@ -89,7 +88,7 @@
 <br><br>
 10. 이 연구에 참가하면 사례가 지급됩니까?
 <br>
-귀하의 연구 참여시 감사의 뜻으로 스타벅스 커피 기프티콘 (1장, 4000원 상당)이 증정될 것입니다. 기프티콘은 귀하의 휴대폰으로 발송됩니다. 사례비를 지급받기 위해서는 설문 끝에 나타나는 회색 바탕의 실험 결과를 전체 선택 하셔서 복사한 뒤 연구자 sunwooj@snu.ac.kr 에게 보내주셔야 합니다.                    
+귀하의 연구 참여시 감사의 뜻으로 스타벅스 커피 기프티콘 (1장, 4000원 상당)이 증정될 것입니다. 기프티콘은 귀하의 휴대폰으로 발송됩니다.               
 <br><br>
 11. 연구에 대한 문의는 어떻게 해야 됩니까?
 <br>
@@ -112,15 +111,17 @@
 5. 나는 담당 연구자나 위임 받은 대리인이 연구를 진행하거나 결과 관리를 하는 경우와 법률이 규정한 국가 기관 및 서울대학교 생명윤리위원회가 실태 조사를 하는 경우에는 비밀로 유지되는 나의 개인 신상 정보를 확인하는 것에 동의합니다. <br>
 6. 나는 언제라도 이 연구의 참여를 철회할 수 있고 이러한 결정이 나에게 어떠한 해도 되지 않을 것이라는 것을 압니다. 
 <br><br>
-동의서에 동의하시고 실험 참여를 원하시면 아래 항목을 체크 하시고 실험 시작 버튼을 눌러주세요.
+동의서에 동의하시고 실험 참여를 원하시면 아래에서 '예'를 체크 하시고 실험 시작 버튼을 눌러주세요.
 </p>
 
 <form class='center-text'>
-  <input type='checkbox' id='consent' name='consent' value='1'> 위 내용을 이해 했으며 실험 참여에 동의합니다. 
+본 연구에 참여하시겠습니까?
+    <input type='checkbox' id='consent' name='consent' value='1'> 예 
+    <input type='checkbox' id='noconsent' name='consent' value='0'> 아니오
 </form>
 
 <br><br>
-<button type='button' id='gotoInstructions'>실험으로</button>
+<button type='button' id='gotoInstructions'>실험 시작</button>
 <br><br> 
 <p><span style='color: blue' id="checkboxWarning"></span></p>
 
