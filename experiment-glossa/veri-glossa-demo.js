@@ -323,8 +323,8 @@ function stepExperiment () {
 
         // Tell HTML which sound file will be played
         document.getElementById('currentAudio1').src = 
-        // "exp2-stimuli/" + item + "-" + verbtype + "-" + "qed" + "-" +prosody + ".wav";
-        "https://sunwoojeong.com/experiments/veridicality/exp2/exp2-stimuli/" + item + "-" + verbtype + "-" + "qed" + "-" + prosody + ".wav";
+        // "glossa-stimuli/" + item + "-" + verbtype + "-" + "qed" + "-" +prosody + ".wav";
+        "https://sunwoojeong.com/experiments/veridicality/exp-glossa/glossa-stimuli/" + item + "-" + verbtype + "-" + "qed" + "-" + prosody + ".wav";
         
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
